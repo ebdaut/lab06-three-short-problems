@@ -3,6 +3,8 @@ using System.Xml.Serialization;
 
 int choice;
 Random rng = new Random(4000);
+do
+{
 
 Console.WriteLine("\n=== CSCI 1250 Lab 06 ===");
 Console.WriteLine("1. The Grade Checker");
@@ -14,8 +16,13 @@ Console.WriteLine("5. Quit");
 System.Console.Write("Choose Options 1-5: ");
 choice = Convert.ToInt32(Console.ReadLine());
 
-do
-{
+while (choice < 1 || choice > 5)
+    {
+        System.Console.WriteLine ("Choose a number 1-5. ");
+        System.Console.Write ("Choose 1-5: ");
+        choice = Convert.ToInt32(Console.ReadLine());
+    }
+
 if (choice == 1 || choice == 4)
 {
     bool validInput = false;
@@ -104,12 +111,31 @@ if (choice == 3 || choice == 4)
     int[] scoreValues = new int[5];
     int total = 0;
     int passingAmount = 0;
+    const int minPassingScore = 50;
     System.Console.WriteLine("\n=== Exercise 3: The Score Report ===");
-}
-if (choice < 1 || choice > 5)
-{
-    System.Console.WriteLine("Choose a number from 1 to 5");
+
+    for (int i = 0; i < scoreValues.Length; i++)
+    {
+        System.Console.WriteLine($"Score {i + 1}: ");
+        scoreValues[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    int maxScores = scoreValues.Max();
+    foreach(int score in scoreValues)
+        {
+            total += score;
+
+            if (score >= minPassingScore)
+            {
+                passingAmount++;
+            }
+        }
+        double average = Convert.ToDouble(total)/scoreValues.Length;
+
+        System.Console.WriteLine($"Scores Entered: {scoreValues.Length}");
+        System.Console.WriteLine($"Total: {total}");
+        System.Console.WriteLine($"Average: {average}");
+        System.Console.WriteLine($"Highest: {maxScores}");
+        System.Console.WriteLine($"Passing: {passingAmount} of {scoreValues.Length}");
     }
 }
 while(choice != 5);
-Console.WriteLine("\nGoodbye.");
