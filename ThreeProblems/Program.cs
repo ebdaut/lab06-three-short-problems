@@ -21,6 +21,42 @@ if (choice == 1 || choice == 4)
     char gradeLetter;
     System.Console.WriteLine("\n=== Exercise 1: The Grade Checker ===");
 
+    while (!validInput)
+        {
+            System.Console.Write("Insert a number grade: ");
+            int grade = Convert.ToInt32(Console.ReadLine());
+            if (grade >= 0 && grade <= 100)
+            {
+                grade = Convert.ToInt32(grade);
+                validInput = true;
+                if (grade >= 90)
+                {
+                    gradeLetter = 'A';
+                }
+                else if (grade >= 80)
+                {
+                    gradeLetter = 'B';
+                }
+                else if (grade >= 70)
+                {
+                    gradeLetter = 'C';
+                }
+                else if (grade >= 60)
+                {
+                    gradeLetter = 'D';
+                }
+                else
+                {
+                    gradeLetter = 'F';
+                }
+                System.Console.WriteLine($"{grade} earns a {gradeLetter}");
+            }
+            else
+            {
+                System.Console.WriteLine("Please enter a score between 0 and 100.");
+            }
+        }
+
 }
 
 if (choice == 2 || choice == 4)
