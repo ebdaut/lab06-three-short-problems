@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Serialization;
 
 int choice;
 Random rng = new Random(4000);
@@ -65,6 +66,37 @@ if (choice == 2 || choice == 4)
     int rollAmount = 0;
     int wonAmount = 0;
     System.Console.WriteLine("\n=== Exercise 2: The Dice Table ===");
+
+    while(rollAgain != 'n')
+        {
+            rollAmount++;
+            int userRoll = rng.Next(1,7);
+            int secondUserRoll = rng.Next(1,7);
+            int totalRollAmount = userRoll + secondUserRoll;
+            string outcome;
+            
+            if (userRoll == 1 && secondUserRoll == 1)
+            {
+                outcome = "Snake Eyes!";
+            }
+            else if (userRoll == secondUserRoll)
+            {
+                outcome = "Doubles!";
+            }
+            else if (totalRollAmount == 7 || totalRollAmount == 11)
+            {
+                outcome = "Winner!";
+                wonAmount ++;
+            }
+            else
+            {
+                outcome = "";
+            }
+             System.Console.WriteLine($"Roll {rollAmount}: {userRoll} and {secondUserRoll}. Total {totalRollAmount}. {outcome}");
+             System.Console.WriteLine("Would you like to roll again? (y/n): ");
+             rollAgain = Console.ReadLine()[0];
+        }
+        System.Console.WriteLine($"You rolled {rollAmount}and won {wonAmount}.");
 }
 
 if (choice == 3 || choice == 4)
