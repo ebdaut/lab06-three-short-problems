@@ -1,0 +1,15 @@
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\bin\Debug\net10.0\ThreeProblems.exe
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\bin\Debug\net10.0\ThreeProblems.deps.json
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\bin\Debug\net10.0\ThreeProblems.runtimeconfig.json
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\bin\Debug\net10.0\ThreeProblems.dll
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\bin\Debug\net10.0\ThreeProblems.pdb
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.AssemblyInfoInputs.cache
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.AssemblyInfo.cs
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.csproj.CoreCompileInputs.cache
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.sourcelink.json
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.dll
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\refint\ThreeProblems.dll
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.pdb
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ThreeProblems.genruntimeconfig.cache
+C:\Users\ebdau\CSCI1250\lab06-three-short-problems\ThreeProblems\obj\Debug\net10.0\ref\ThreeProblems.dll

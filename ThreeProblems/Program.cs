@@ -1,11 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*
+*Name: Ethan Daut
+*Course: CSCI 1250, Section 002
+*Assignment: Lab 06, Three Short Problems
+*Date: October 25, 2026
+*Description: A menu that keeps running until the user quits, offering three
+*independent exercies or all three at once. Each exercise practices decisions
+*and one of the four loops.
+*/
+
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Serialization;
+using System.Runtime.CompilerServices;
 
 int choice;
 Random rng = new Random(4000);
+
+// do while loop that repeats the code until the user quits
 do
 {
 
+// context information
 Console.WriteLine("\n=== CSCI 1250 Lab 06 ===");
 Console.WriteLine("1. The Grade Checker");
 Console.WriteLine("2. The Dice Table");
@@ -16,13 +30,14 @@ Console.WriteLine("5. Quit");
 System.Console.Write("Choose Options 1-5: ");
 choice = Convert.ToInt32(Console.ReadLine());
 
+// if the user doesnt choose 1-5, it repeats
 while (choice < 1 || choice > 5)
     {
         System.Console.WriteLine ("Choose a number 1-5. ");
-        System.Console.Write ("Choose 1-5: ");
         choice = Convert.ToInt32(Console.ReadLine());
     }
 
+// user choice for the grade checker
 if (choice == 1 || choice == 4)
 {
     bool validInput = false;
@@ -67,6 +82,7 @@ if (choice == 1 || choice == 4)
 
 }
 
+// user choice for the dice table
 if (choice == 2 || choice == 4)
 {
     char rollAgain = 'y';
@@ -99,13 +115,14 @@ if (choice == 2 || choice == 4)
             {
                 outcome = "";
             }
-             System.Console.WriteLine($"Roll {rollAmount}: {userRoll} and {secondUserRoll}. Total {totalRollAmount}. {outcome}");
+             System.Console.WriteLine($"Roll: {userRoll} and {secondUserRoll}. Total {totalRollAmount}. {outcome}");
              System.Console.WriteLine("Would you like to roll again? (y/n): ");
              rollAgain = Console.ReadLine()[0];
         }
-        System.Console.WriteLine($"You rolled {rollAmount}and won {wonAmount}.");
+        System.Console.WriteLine($"You rolled {rollAmount} and won {wonAmount}.");
 }
 
+// user choice for picking the score report and picking all three as well
 if (choice == 3 || choice == 4)
 {
     int[] scoreValues = new int[5];
@@ -139,3 +156,4 @@ if (choice == 3 || choice == 4)
     }
 }
 while(choice != 5);
+Console.WriteLine("\nGoodbye.");
